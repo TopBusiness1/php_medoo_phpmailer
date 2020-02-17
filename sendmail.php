@@ -68,13 +68,13 @@ $daysto = array(
           $mail->isSMTP();                                            // Send using SMTP
           $mail->Host       = 'smtp.gmail.com';                     // Set the SMTP server to send through
           $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-          $mail->Username   = 'reporttestsmtp@gmail.com';              // SMTP username
-          $mail->Password   = 'smtp1234';                            // SMTP password
+          $mail->Username   = 'admin@gmail.com';              // SMTP username
+          $mail->Password   = 'admin';                            // SMTP password
           $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
           $mail->Port       = 587;                                    // TCP port to connect to
 
           //Recipients
-          $mail->setFrom('reporttestsmtp@gmail.com', 'Guy atias');
+          $mail->setFrom('adminp@gmail.com', 'Admin');
           // $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
           $mail->addAddress($mailrow['email']);               // Name is optional
           // $mail->addReplyTo('info@example.com', 'Information');
@@ -82,7 +82,6 @@ $daysto = array(
           // $mail->addBCC('bcc@example.com');
 
           // Attachments
-          // $mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
           $mail->addAttachment('./Report.csv');    // Optional name
 
           // Content
